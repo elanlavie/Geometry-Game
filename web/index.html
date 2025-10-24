@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Games</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="app-header">
+        <h1>Geometry Games</h1>
+        <p class="tagline">Challenge your understanding of shapes, measurements, and transformations.</p>
+    </header>
+
+    <main class="app">
+        <section class="sidebar" aria-label="Game controls">
+            <div class="card">
+                <h2>How to play</h2>
+                <ol>
+                    <li>Select a difficulty and press <strong>Start</strong>.</li>
+                    <li>Study the shape shown on the board.</li>
+                    <li>Choose the correct answer before the timer runs out.</li>
+                    <li>Earn streak bonuses for consecutive correct answers!</li>
+                </ol>
+            </div>
+
+            <div class="card settings">
+                <h2>Game settings</h2>
+                <label class="difficulty">
+                    <span>Difficulty</span>
+                    <select id="difficulty" aria-label="Select difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </label>
+                <button id="start-btn" class="primary">Start</button>
+                <button id="reset-btn" class="secondary" disabled>Reset</button>
+            </div>
+
+            <div class="card score" aria-live="polite">
+                <h2>Stats</h2>
+                <dl>
+                    <div>
+                        <dt>Score</dt>
+                        <dd id="score">0</dd>
+                    </div>
+                    <div>
+                        <dt>Streak</dt>
+                        <dd id="streak">0</dd>
+                    </div>
+                    <div>
+                        <dt>Best streak</dt>
+                        <dd id="best-streak">0</dd>
+                    </div>
+                    <div>
+                        <dt>High score</dt>
+                        <dd id="high-score">0</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="card resources">
+                <h2>Teacher tips</h2>
+                <ul>
+                    <li>Project the board and discuss each diagram as a class.</li>
+                    <li>Let students explain how they estimated before revealing the answer.</li>
+                    <li>Assign quick rounds (2&ndash;4 minutes) as warm-up activities.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="board" aria-live="polite">
+            <div class="status">
+                <div class="timer">
+                    <span class="icon" aria-hidden="true">⏱</span>
+                    <span id="timer">02:00</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+
+            <canvas id="game-canvas" width="480" height="360" role="img" aria-label="Geometry challenge board"></canvas>
+
+            <div class="prompt" id="prompt">Press start to begin.</div>
+
+            <div class="choices" role="group" aria-label="Answer choices">
+                <button class="choice" data-choice="0" disabled></button>
+                <button class="choice" data-choice="1" disabled></button>
+                <button class="choice" data-choice="2" disabled></button>
+                <button class="choice" data-choice="3" disabled></button>
+            </div>
+
+            <div class="feedback" id="feedback" aria-live="assertive"></div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>
+            Need inspiration? Try asking students how changing a single dimension affects the area or perimeter.
+        </p>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
