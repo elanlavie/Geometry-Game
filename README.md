@@ -1,4 +1,4 @@
-# Spinning Octahedron Game
+# Octahedron
 
 A simple browser-based 3D geometry visualizer built with **Three.js**. It displays an octahedron that can be rotated interactively using the mouse.
 
