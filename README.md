@@ -1,28 +1,31 @@
-# Geometry Games Web Edition
+# Spinning Octahedron Game
 
-This repository now contains a browser-based version of the Geometry Games activity so students can play on Chromebooks and other devices without installing an app.
+A simple browser-based 3D geometry visualizer built with **Three.js**. It displays an octahedron that can be rotated interactively using the mouse.
 
-## Getting started
+## 🧭 Features
+- Interactive 3D octahedron
+- Clean visual design with lighting and wireframe edges
+- Responsive layout that fits any screen size
 
-1. Open the `web/index.html` file in a modern browser, or serve the `web/` directory with a simple web server:
+## 🖥️ Live Demo
+You can host it for free using **GitHub Pages**.
+
+## 🚀 Setup
+1. Clone this repository:
    ```bash
-   python -m http.server --directory web 8000
+   git clone https://github.com/YOUR_USERNAME/spinning-octahedron-game.git
    ```
-2. Visit <http://localhost:8000> to play the game.
+2. Navigate into the project:
+   ```bash
+   cd spinning-octahedron-game
+   ```
+3. Open `index.html` in your browser.
 
-No build step is required. All logic is implemented with vanilla HTML, CSS, and JavaScript.
-
-## Gameplay highlights
-
-- Timed rounds encourage quick mental math with geometry topics such as area, perimeter, circumference, composite figures, and translations.
-- Difficulty settings adjust the scale of dimensions and point values, making it easy to differentiate practice for different classes.
-- A dynamic canvas draws each challenge with labeled dimensions, helping students connect visuals with calculations.
-- High-score tracking (stored locally in the browser) keeps students motivated across sessions.
-
-## Customization tips
-
-- Adjust the `TOTAL_TIME` constant in `web/app.js` to change the length of each round.
-- Modify the `QUESTION_GENERATORS` array in `web/app.js` to add, remove, or tweak challenge types.
-- Update the layout or color palette in `web/styles.css` to match your classroom branding.
-
-Enjoy exploring geometry with your students!
+## 🌐 Hosting on GitHub Pages
+1. Commit and push your files to a new repository on GitHub.
+2. In your repo, go to **Settings → Pages**.
+3. Under **Branch**, select `main` and click **Save**.
+4. Wait a minute, then visit:
+   ```
+   https://YOUR_USERNAME.github.io/spinning-octahedron-game
+   ```
